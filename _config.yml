@@ -9,6 +9,6 @@
 
 #import "RCTValueAnimatedNode.h"
 
-@interface RCTModuloAnimatedNode : RCTValueAnimatedNode
+#@interface RCTModuloAnimatedNode : RCTValueAnimatedNode
 
 @endtheme: jekyll-theme-minimal
