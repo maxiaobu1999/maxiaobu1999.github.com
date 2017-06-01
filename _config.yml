@@ -11,4 +11,4 @@
 
 #@interface RCTModuloAnimatedNode : RCTValueAnimatedNode
 
-@endtheme: jekyll-theme-minimal
+#@endtheme: jekyll-theme-minimal
