@@ -28,7 +28,7 @@
 
 4. 网页的标题
     - title也是有助于SEO搜索引擎优化的
-![title效果](https://maxiaobu1999.github.io/html5/resources/img/what_is_Description.png)
+![title效果](https://maxiaobu1999.github.io/html5/resources/img/what_is_title.png)
 
 HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
 顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
@@ -36,10 +36,21 @@ HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文
 p标签是一个文本级标签。从学习p的第一天开始，就要死死记住：p里面只能放文字、图片、表单元素。其他的一律不能放。
 
 ###body
+1. p标签
+    - 段落，是英语paragraph“段落”缩写。
+    - HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
+    - 顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+    - p标签是一个文本级标签。从学习p的第一天开始，就要死死记住：p里面只能放文字、图片、表单元素。其他的一律不能放。
 
+2. 图片
+    
+        <img src="images/baby.jpg" alt="巴黎结婚照" />
 
+3. 超级链接
 
-
+    	<a href="09_img.html" title="很好看哦" target="_blank">结婚照</a>
+    - blank就是“空白”的意思，就表示新建一个空白窗口。为毛有一个_ ，就是规定，没啥好解释的。
+    - title 悬停文本
 
 
 ## Welcome to GitHub Pages
