@@ -24,16 +24,18 @@
 
        <meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" />
     - 只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
-![Description效果](https://maxiaobu1999.github.io/html5/heima/html/img/what_is_Description.png)
+![Description效果](https://maxiaobu1999.github.io/html5/resources/img/what_is_Description.png)
 
-
+4. 网页的标题
+    - title也是有助于SEO搜索引擎优化的
+![title效果](https://maxiaobu1999.github.io/html5/resources/img/what_is_Description.png)
 
 HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
 顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
 
 p标签是一个文本级标签。从学习p的第一天开始，就要死死记住：p里面只能放文字、图片、表单元素。其他的一律不能放。
 
-
+###body
 
 
 
