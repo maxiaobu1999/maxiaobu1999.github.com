@@ -1,5 +1,5 @@
 ##HTML骨架
-*   [HTML骨架](https://maxiaobu1999.github.io/html5/html5.html)
+*   [HTML总结](https://maxiaobu1999.github.io/html5/heima/README.html)
 
 HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
 顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。

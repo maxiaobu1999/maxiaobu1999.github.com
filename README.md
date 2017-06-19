@@ -1,6 +1,6 @@
 ##目录
 *   [web前端相关](https://maxiaobu1999.github.io/html5/html5.html)
-*   [黑马web前端总结](https://maxiaobu1999.github.io/html5/heima/README.md)
+*   [黑马web前端总结](https://maxiaobu1999.github.io/html5/heima/README.html)
 *   [markdown语法](http://blog.leanote.com/post/freewalk/Markdown-%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C)
 
 

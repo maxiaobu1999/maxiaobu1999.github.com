@@ -1,5 +1,24 @@
 ##HTML骨架
-*   [HTML骨架](https://maxiaobu1999.github.io/html5/html5.html)
+*   [code](https://maxiaobu1999.github.io/html5/heima/html/base.html)
+
+        <head>
+            <meta charset="UTF-8"><!--1字符集-->
+            <meta name="Keywords" content="收索引擎关键字 SEO"><!--2收索引擎关键字-->
+            <meta name="Description" content="收索引擎页面描述 SEO"><!--3收索引擎页面描述-->
+            <title>网页的标题</title><!--4网页的标题-->
+        </head>
+
+###head
+1. 字符集 
+- 中文能够使用的字符集两种*UTF-8* & *gb2312*：
+- UTF-8：全，各种鸟语都有
+- gb23112：小  只有汉语及常用其他语言
+2. 收索引擎关键字
+        
+       <meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" />
+只要设置的Description页面面熟，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO，search engine optimization，搜索引擎优化。
+![Description效果](https://maxiaobu1999.github.io/html5/heima/html/img/what_is_Description.png)
+
 
 HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
 顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
