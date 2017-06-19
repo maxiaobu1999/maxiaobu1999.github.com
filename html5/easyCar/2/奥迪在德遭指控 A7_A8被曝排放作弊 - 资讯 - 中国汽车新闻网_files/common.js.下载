@@ -1,0 +1,25 @@
+/**
+ * Created by zhoulei on 2016/5/11.
+ */
+$(function(){
+	var $JMenu = $('#J-sideMenu');
+	var $side = $('div.side-hide');
+	$JMenu.html($side.find('.menu-item').eq(0).html()+'<i></i>');
+	$JMenu.on('click',function(){
+		var _self = $(this);
+		_self.siblings('.side-hide').show();
+		return false;
+	});
+
+	$side.on('click','.menu-item',function(){
+		var _self = $(this),_text = _self.text(),_typeid = _self.attr('data-typeid');
+		$JMenu.html(_text+'<i></i>');
+		$("#typeid").val(_typeid);
+		$('.side-hide').hide();
+		return false;
+	});
+
+	$('body').on('click',function(){
+		$('.side-hide').hide();
+	})
+})
