@@ -1,7 +1,10 @@
-##目录
-*   [web前端相关](https://maxiaobu1999.github.io/html5/html5.html)
-*   [黑马web前端总结](https://maxiaobu1999.github.io/html5/heima/README.md)
-*   [markdown语法](http://blog.leanote.com/post/freewalk/Markdown-%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C)
+##HTML骨架
+*   [HTML骨架](https://maxiaobu1999.github.io/html5/html5.html)
+
+HTML标签是分等级的，HTML将所有的标签分为两种：容器级、文本级。
+顾名思义，容器级的标签，里面可以放置任何东西；文本级的标签里面，只能放置文字、图片、表单元素。
+
+p标签是一个文本级标签。从学习p的第一天开始，就要死死记住：p里面只能放文字、图片、表单元素。其他的一律不能放。
 
 
 
