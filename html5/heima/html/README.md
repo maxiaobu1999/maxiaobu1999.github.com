@@ -52,44 +52,26 @@ p标签是一个文本级标签。从学习p的第一天开始，就要死死记
     - blank就是“空白”的意思，就表示新建一个空白窗口。为毛有一个_ ，就是规定，没啥好解释的。
     - title 悬停文本
 
-
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/maxiaobu1999/maxiaobu1999.github.com/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+4. 无序列表
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maxiaobu1999/maxiaobu1999.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
+<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li>广州</li>
+		<li>铁岭</li>
+	</ul>
+```	
+    - ul就是英语unordered list，“无序列表”的意思。
+        li 就是英语list item ， “列表项”的意思。
+    - “组标签”，就是要么不写，要么就要写一组。
+    - 所以的li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li
+    - li是一个容器级标签，li里面什么都能放
+    
+5. div和span
+    - div和span是非常重要的标签，div的语义是division“分割”； span的语义就是span“范围、跨度”
+    - div标签是一个容器级标签，里面什么都能放，甚至可以放div自己
+    - span也是表达“小区域、小跨度”的标签，但是是一个“文本级”的标签。
+      就是说，span里面只能放置文字、图片、表单元素。 span里面不能放p、h、ul、dl、ol、div。
+    - 总结：div换行 span不换行
 
 
