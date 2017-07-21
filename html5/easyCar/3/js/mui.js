@@ -1004,7 +1004,7 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 		var targetElement = $.targets.click;
 		if (targetElement) {
 			var clickEvent, touch;
-			// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect
+			// On some android devices activeElement needs to be blurred otherwise the synthetic click will have no effect
 			if (document.activeElement && document.activeElement !== targetElement) {
 				document.activeElement.blur();
 			}

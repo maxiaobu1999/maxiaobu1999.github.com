@@ -215,7 +215,7 @@ function getType(obj) {
  */
 function getcurrentOS() {
 	var u = navigator.userAgent;
-	if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
+	if (u.indexOf('android') > -1 || u.indexOf('Linux') > -1) { //安卓手机
 		return "a";
 	} else if (u.indexOf('iPhone') > -1) { //苹果手机
 		return "i";
