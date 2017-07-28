@@ -1,5 +1,4 @@
-##BroadcastReceiver总结
-    作用：与用户交互的界面
+##WebView总结
 *   [WebView常见的一些坑](https://maxiaobu1999.github.io/html5/heima/README.html)
     * api16之前 addJavascriptInterface()漏洞，利用反射执行任意java对象
     * WebView动态写在其他容器中，要先remove掉WebView，再调用WebView的removeAllView()和Disdory()

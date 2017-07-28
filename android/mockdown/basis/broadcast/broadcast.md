@@ -23,4 +23,3 @@
 *   [LocalBroadcastManager详解](https://maxiaobu1999.github.io/html5/heima/README.html)
     * sendBroadcast()实质是handler sendMessage() 高效 与其他广播方式不同
     * 两个map 一个list 储存关系和对象
-![生命周期图](http://img-1253423006.costj.myqcloud.com/1783214-c9f8e9f59798d782.png)

@@ -1,6 +1,7 @@
 ##view总结
 
 * [view系统级绘制](https://maxiaobu1999.github.io/html5/heima/README.html)
+    * activity有个window对象，PhoneWindow是唯一实现类，内部类DecorView是顶级view，并负责与渲染服务进行交互
     * phoneWindow window的唯一实现类 view最顶层的管理容器
     * decorView   PhoneWindow的内部类 通过decorView实现消息传递
     * Android应用程序调用SurfaceFlinger服务把经过测量、布局和绘制后的Surface渲染到显示屏幕上。
@@ -47,4 +48,17 @@
     * 两个容易混淆的方法 
         * invalidate() 大小没有变化，会draw（） ，不会调用layout（）
         * requestLayout（） 会调用draw（） 不会layout（）
-![Handler类图](http://img-1253423006.costj.myqcloud.com/Handler%E7%B1%BB%E5%9B%BE.jpg)
+* [事件分发机制](https://maxiaobu1999.github.io/html5/heima/README.html)
+    * [为什么会有事件分发机制](https://maxiaobu1999.github.io/html5/heima/README.html)
+        * view是树形结构的，view可能会重叠在一起，多个view会相应同一点击，这个事件给谁
+    * [三个重要的事件分发的方法](https://maxiaobu1999.github.io/html5/heima/README.html)
+        * dispatchTouchEvent
+        * onInterceptTouchEvent
+            * activity和view没有
+        * onTouchEvent
+    * [事件分发的流程](https://maxiaobu1999.github.io/html5/heima/README.html)
+    * activity->PhoneWindow->DecorView->ViewGroup->...->View
+        * 屏幕点击事件首先传递给activity->view的实现管理类->通过内部类DecorView进行消息传递
+        ->外面最大的父容器viewGroup->依次传递给子view->依次反转回activity
+        ![事件分发](http://upload-images.jianshu.io/upload_images/966283-b9cb65aceea9219b.png?imageMogr2/auto-orient/strip%7CimageView2/2)
+    

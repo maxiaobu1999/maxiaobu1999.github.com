@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>performance.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-radius: 4px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print {
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(204, 204, 204); background-color: white; margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.117647); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h2><a name='header-n0' class='md-header-anchor '></a>性能优化总结</h2><ul><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>anr</a></p><ul><li><p>ActivityManager和windowManager系统服务监视 aty 5秒 broadcast10秒 service15秒 系统显示应用未响应对话框</p></li><li><p>主线程进行io操作  主线程存在耗时操作</p></li><li><p>解决</p><ul><li>使用Thread或HandleThread时设定优先级</li><li>使用Asynctask处理耗时操作<br/></li><li>使用handler处理工作线程耗时操作</li><li>在生命周期回调方法中避免好使代码</li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>oom</a></p><ul><li><p>当前内存加上我们申请的内存资源超过Dalvik虚拟机的最大内存，抛出Out Of Memory异常</p></li><li><p>bitmap</p><ul><li>显示合适的尺寸</li><li>及时释放内存 Java jni各一块，java不能回收c那块，需recycle()是jni那块内存</li><li>图片压缩  BitmapFactory.Options() 不加载原图进内存</li><li>inBitmap属性 使用之前bitmap使用的内存</li><li>捕获OutOfMemoryError，不推荐，压死骆驼最后一根草</li></ul></li><li><p>其他</p><ul><li>listView convertView/lru(三级缓存) </li><li>避免在onDraw()创建对象，造成内存抖动，也可能oom</li><li>谨慎使用多进程 虽然内存多了bug也多</li><li>请求更大内存</li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>bitmap</a></p><ul><li><p>recycle 清理native内存及java引用，不立即回收标记为dead，bitmap不可使用会抛异常，官方注释不建议调用 </p><ul><li>3.0之后内存 Java jni各一块，</li><li>3.0前都存在堆中，因为不稳定，所以建议recycle()    <br/></li></ul></li><li><p>LruCache(LRU算法)<br/></p><ul><li>最近最少使用 没满往栈里放，满了栈底开始移除，栈里有移到上面，没有放栈顶</li><li>内部使用LinkHashMap实现</li><li>trimToSize()把用的最久的缓存对象清除，并添加新的缓存对象</li><li>safeSizeOf()计算大小并从缓存中去掉</li><li>put() get() 把新对象加进去 取出来</li></ul></li><li><p>计算inSampleSize </p><ul><li>BitmapFactory.Options()算出缩放比例</li></ul></li><li><p>三级缓存  <br/></p><ul><li>网络 本地 内存 </li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>UI卡顿</a></p><ul><li><p>60fps-&gt;16ms</p><ul><li>一秒60帧 每16ms更新一次页面</li></ul></li><li><p>overdraw</p><ul><li>同一帧绘制多次 多背景重叠</li></ul></li><li><p>UI卡顿原因</p><ul><li>ui线程中轻微耗时操作</li><li>layout过于复杂，无法在16ms内完成渲染</li><li>同一时间动画执行过多</li><li>view过度绘制，背景不要重叠</li><li>View频繁的触发measure、layout，引起view频繁渲染</li><li>内存频繁触发gc，暂时阻塞渲染操作</li><li>冗余的资源及逻辑等导致加载和执行缓慢</li><li>anr ui卡顿就是轻量版的anr</li></ul></li><li><p>总结</p><ul><li>布局优化<include />重用、<merge />占位父布局、<ViewStub />使用时加载
+尽量不要冗余嵌套及复杂布局，用gone</li><li>列表及Adapter优化</li><li>背景和图片等内存分配优化，减少不必要的背景，图片需处理</li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>内存泄漏</a></p><ul><li><p>java内存泄露基础知识</p><ul><li><p>无用对象持续占有内存或无用对象的内存得不到及时释放，从而造成的内存空间的浪费 </p></li><li><p>java内存分配策略</p><ul><li><p>静态储存区（方法区）</p><ul><li>存放静态数据、全局变量</li><li>程序编译时已经分配好了，静态存储区的变量在程序运行期间都存在</li></ul></li><li><p>栈区</p><ul><li>方法体内定义的基本类型变量与对象的引用变量（地址）存放在栈区，超过变量作用域释放内存；
+空间可其他方法重新使用<br/></li><li>因为内置于处理器中所以效率高</li></ul></li><li><p>堆区  <br/></p><ul><li>存放new出来的对象和数组,java垃圾回收器管理</li></ul></li></ul></li><li><p>java如何管理内存的</p><ul><li></li></ul></li><li><p>java中的内存泄露</p></li></ul></li><li><p>Android内存泄露</p><ul><li><p>单例</p></li><li><p>匿名内部类  非静态内部类会持有外部类引用</p></li><li><p>handler    looper -》message-》handler-》是aty匿名内部类</p></li><li><p>避免使用static成员变量 <br/></p><ul><li>生命周期与app一至，在后台时内存不会释放，后台进程占内存多的先死</li></ul></li><li><p>资源未关闭</p><ul><li>broadcast Cursor，Stream没有close</li></ul></li><li><p>AsyncTask造成内部泄露，调用cancel（）</p></li><li><p>WebView单独线程，持有activity引用，类似匿名内部类</p><ul><li>ViewGroup中放WebView，动态add到Activity</li><li>持有activity弱引用</li><li>activity停止时remove掉，再destroy掉WebView</li></ul></li></ul></li><li><p>解决方法</p><ul><li>leakCanary     检测内存泄露</li><li>Android Monitor  分析运行时的内存文件</li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>内存管理</a></p><ul><li><p>内存管理机制概述</p><ul><li>分配机制：操作系统为每个进程分配合理大小内存，保证程序能够正常运行，不会内存不够使用，或者占用太多内存</li><li>回收机制：内存不足时，会回收再分配内存资源机制，保证新的进程正常运行，杀死占有进程的机制  <br/></li></ul></li><li><p>Android内存管理机制</p><ul><li><p>进程分类</p><ul><li>Zygote进程
+这个是Android框架的主要进程，所有的App进程以及系统服务进程SystemServer都是由Zygote进程Fork出来的</li><li>系统服务进程SystemServer</li><li>App的主进程
+每一个App的运行都是在一个独立的进程，进程的名字就是App的packagename，这些进程都是从Zygote进程Fork出来的，并受AMS（ActivityManagerService）管理<br/></li><li>App的辅助进程
+可以允许App有多个进程，在AndroidManifest.xml里边配置android:process属性，就可以开启多进程，这些进程名字都是packagename:name这种，以区分是属于哪个App，我一般称之为辅助进程。但这些进程也都跟主进程一样，也是从Zygote进程Fork出来的，并受AMS管理</li><li>Native进程
+Android除了使用Java，还有NDK，可以使用C/C++去开发，然后这里也是可以Fork出进程的，我一般称之为Native进程，Native进程可以不受AMS管理，自由度很大，本文暂且不讲   <br/></li></ul></li><li><p>分配机制</p><ul><li>先给小内存，慢慢增大，根据机型有最大值</li></ul></li><li><p>倾向于杀死能够回收更多内存的进程</p></li></ul></li><li><p>内存管理目标</p><ul><li>更少的占用内存</li><li>在合适的时候，合理的释放系统资源</li><li>在系统内存紧张的情况下，能释放掉大部分不重要的资源，来为Android系统提供可用的内存</li><li>在生命周期中，保存还原重要数据，以至于系统能正确的恢复应用</li></ul></li><li><p>内存优化的方法</p><ul><li><p>当service完成任务后，尽量停止他</p></li><li><p>系统内存紧张时，会调用OnTrimMemory()回调（类似onCreate），释放掉一些不重要的资源，如动态生成的View，图片缓存，Fragment等；  <br/></p></li><li><p>滥用Bitmap  合适大小  recycle()清c中缓存 软引用  lruCache算法</p></li><li><p>使用针对内存优化过的数据容器 </p><ul><li>SparseArray（key只能是int）、ArrayMap用来代替HashMap 数据量不大，最好在千级以内 </li><li>如果key的类型已经确定为int类型，那么使用SparseArray，因为它避免了自动装箱的过程，如果key为long类型，它还提供了一个LongSparseArray来确保key为long类型时的使用</li><li>如果key类型为其它的类型，则使用ArrayMap</li><li>少用枚举</li></ul></li><li><p>避免使用依赖注入框架</p></li><li><p>使用ZIP对齐APK</p></li><li><p>使用多进程 把消耗大内存过大或长期运行的模块移入单独进程   <br/></p></li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>冷热启动</a></p><ul><li><p>冷启动</p><ul><li>应用启动前，系统中没有该应用的任何进程信息，创建新进程分配给app</li></ul></li><li><p>热启动</p><ul><li>按返回键退出应用，然后在进程被杀死前重启动，启动时进程保持在后台</li></ul></li><li><p>冷启动优化</p><ul><li>减少布局复杂性 使用viewStub 按需加载</li><li>减少onCreate()工作量</li><li>不在application中使用静态变量</li></ul></li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>不要用static储存数据</a></p><ul><li>进程杀死会初始化</li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>sp安全问题</a></p><ul><li>不能跨进程同步</li><li>文件过大 解析大sp文件时会创建大量临时对象</li></ul></li><li><p><a href='https://maxiaobu1999.github.io/html5/heima/README.html'>内存对象序列化</a></p><ul><li>Serializeble java的 序列化时会产生大量临时变量</li><li>parcelable   Android的  要在磁盘上存储的数据不能用Parcelable</li></ul></li></ul><p><img src='http://frodoking.github.io/img/android/okhttp_request_process.png' alt='binder机制图' /></p></div>
+</body>
+</html>

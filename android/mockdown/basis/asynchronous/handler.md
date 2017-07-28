@@ -1,6 +1,7 @@
 ##handler总结
     作用：与用户交互的界面
 *   [什么是handler](https://maxiaobu1999.github.io/html5/heima/README.html)
+    * 当创建handler时，会从当前进程中取出Looper对象，也就持有了messageQueue对像，handler调用queue的添加message时，queue会调用native方法通知looper开始轮询，在message中获取handler对象调用handlerMessage()
     * Android message机制的上层接口
     * 通过发送和处理Message和Runnable对象来关联相应线程的MessageQueue
     * 可以让对应的Message和Runnable再未来的某个时间点进行相应处理

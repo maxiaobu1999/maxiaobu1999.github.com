@@ -11,4 +11,4 @@
 * activity->PhoneWindow->DecorView->ViewGroup->...->View
     * 屏幕点击事件首先传递给activity->view的实现管理类->通过内部类DecorView进行消息传递
     ->外面最大的父容器viewGroup->依次传递给子view->依次反转回activity
-    ![Handler类图](http://upload-images.jianshu.io/upload_images/966283-b9cb65aceea9219b.png?imageMogr2/auto-orient/strip%7CimageView2/2)
+    ![事件分发](http://upload-images.jianshu.io/upload_images/966283-b9cb65aceea9219b.png?imageMogr2/auto-orient/strip%7CimageView2/2)
