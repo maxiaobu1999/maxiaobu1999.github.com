@@ -23,5 +23,5 @@
         * 使用
             * 创建BindService服务端,继承service，创建实现IBinder接口的实例并提供公共方法给客户端调用
             * OnBind()回调方法返回此Binder实例。
-            * 在客户端中，创建ServiceConnection类，从onServiceConnected()回调方法接收Binder，并使用提供的方法调用绑定服务
+            * 在客户端中，创建ServiceConnection类，从onServiceConnected()回调方法接收iBinder，并使用提供的方法，然后调用绑定服务
 ![service生命周期图](http://my.csdn.net/uploads/201204/17/1334628702_9553.png)       
