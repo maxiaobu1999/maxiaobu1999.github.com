@@ -1,12 +1,21 @@
 ##性能优化总结
-*   [anr](https://maxiaobu1999.github.io/html5/heima/README.html)
-    * ActivityManager和windowManager系统服务监视 aty 5秒 broadcast10秒 service15秒 系统显示应用未响应对话框
-    * 主线程进行io操作  主线程存在耗时操作
+*   [anr](https://developer.android.com/topic/performance/vitals/anr.html)
+    * 当应用的UI线程被阻塞时间过长，ANR会被触发，如果app在前台，系统回显示应用未响应对话框
+        后台ANR需显示dialog，开启开发者模式showAllANR
+    * 促发条件：
+        前台有activity，input事件或broadcastReceiver 5秒内未响应
+        前台无activity，BroadcastReceiver大量事件内未处理完
+        非文档，service也会造成ANR
+    * 鉴定问题
+        * 主线程设计IO操作
+        * 主线程处理长时间运算
+        * 主线程对其他进程做同步binder请求，其他进程长时间未return
+        * 线程死锁
     * 解决
         * 使用Thread或HandleThread时设定优先级
         * 使用Asynctask处理耗时操作  
         * 使用handler处理工作线程耗时操作
-        * 在生命周期回调方法中避免好使代码
+        * 在生命周期回调方法中避免避免代码
 *   [oom](https://maxiaobu1999.github.io/html5/heima/README.html)
     * 当前内存加上我们申请的内存资源超过Dalvik虚拟机的最大内存，抛出Out Of Memory异常
     * bitmap
@@ -137,5 +146,6 @@
 *   [内存对象序列化](https://maxiaobu1999.github.io/html5/heima/README.html)
     * Serializeble java的 序列化时会产生大量临时变量
     * parcelable   Android的  要在磁盘上存储的数据不能用Parcelable
+
 
 ![binder机制图](http://frodoking.github.io/img/android/okhttp_request_process.png)
