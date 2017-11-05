@@ -27,6 +27,53 @@
       提示：“Hi lsyz0021! You've successfully authenticated, but GitHub does not provide shel l access.”说明添加成功。
 
 * [GIT命令](https://gist.github.com/guweigang/9848271)
+    * git status 可以让我们时刻掌握仓库当前的状态，下面的命令告诉我们，readme.txt被修改过了，但还没有准备提交的修改。
+
+            $ git status
+            # On branch master  在master分支
+            # Changes not staged for commit:  改变没有被提交
+            #   (use "git add <file>..." to update what will be committed)
+            #   (use "git checkout -- <file>..." to discard changes in working directory)
+            #
+            #    modified:   readme.txt
+            #
+            no changes added to commit (use "git add" and/or "git commit -a")
+    * git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到，我们在第一行添加了一个“distributed”单词。
+        
+            $ git diff readme.txt 
+            diff --git a/readme.txt b/readme.txt
+            index 46d49bf..9247db6 100644
+            --- a/readme.txt
+            +++ b/readme.txt
+            @@ -1,2 +1,2 @@
+            -Git is a version control system.
+            +Git is a distributed version control system.
+             Git is free software.
+    * git log命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file。
+      如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+      
+            $ git log --pretty=oneline
+            3628164fb26d48395383f8f31179f24e0882e1e0 append GPL
+            ea34578d5496d7dd233c827ed32a8cd576c5ee85 add distributed
+            cb926e7ea50ad11b8f9e909c05226233bf755030 wrote a readme file
+    * git checkout -- file可以丢弃工作区的修改
+    
+            git checkout -- readme.txt
+            git branch    查看当前分支：
+    * 关联一个远程库
+            
+            it remote add origin git@server-name:path/repo-name.git
+    * 创建dev分支，然后切换到dev分支
+    
+            $ git checkout -b dev
+    * 删除文件
+    
+            rm test.txt
+            git commit -m "remove test.txt"
+    * 版本回退
+        * git reset --hard HEAD^   回退上个版本
+        * git reset --hard HEAD^^   回退上上个版本 
+        * git reset --hard 3628164     回退至3628164版本
     * 拉代码
 
             git clone
